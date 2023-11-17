@@ -55,7 +55,7 @@ class Dice {
     float dotY = inputY + 50;
 
     // Display dots based on the face value
-    if (face == 1 || face == 3 || face == 5 || face == 6) {
+    if (face == 1 || face == 3 || face == 5) {
       ellipse(dotX, dotY, dotSize, dotSize); // Center 
     }
     if (face >= 2 || face == 6) {
@@ -65,6 +65,10 @@ class Dice {
     if (face >= 4 || face == 6) {
       ellipse(dotX - 30, dotY + 30, dotSize, dotSize); // Bottom-left 
       ellipse(dotX + 30, dotY - 30, dotSize, dotSize); // Top-right 
+    }
+    if (face == 6) { 
+      ellipse(dotX + 30, dotY , dotSize, dotSize);
+      ellipse(dotX - 30, dotY, dotSize, dotSize);
     }
   }
 }
